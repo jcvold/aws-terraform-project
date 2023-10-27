@@ -1,0 +1,11 @@
+One command to list the files in the S3 bucket created in the first step:
+
+aws s3 ls s3://nginxbucketjcv123
+
+One command lists the versions of the ECS task definition for the service created in step 1:
+
+aws ecs describe-services --cluster your-cluster-name --services your-service-name
+
+This will list several attributes of the service, one of which is the will be the name and version.
+
+Note: In order for these to run, you must first authenticate with AWS.
